@@ -3,25 +3,20 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
+
+permissions:
+  contents: write
 
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v3
 
-      - name: Install and Build 🔧
-        run: |
-          npm ci
-          npm run build
-
       - name: Deploy 🚀
-        if: github.ref == 'refs/heads/main'
         uses: JamesIves/github-pages-deploy-action@v4.4.1
         with:
-          branch: gh-pages # O branch onde o site será publicado
-          folder: . # A pasta que contém os arquivos do site
-          clean: true # Limpa o branch de destino antes do deploy
+          branch: gh-pages
+          folder: .
+          clean: true

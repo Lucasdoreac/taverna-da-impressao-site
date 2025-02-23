@@ -1,0 +1,25 @@
+{
+  "name": "taverna-da-impressao-site",
+  "version": "1.0.0",
+  "description": "Site da Taverna da Impressão",
+  "main": "index.html",
+  "scripts": {
+    "build": "echo 'No build step needed'",
+    "test": "echo 'No tests yet'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lucasdoreac/taverna-da-impressao-site.git"
+  },
+  "keywords": [
+    "rpg",
+    "boardgames",
+    "3d-printing"
+  ],
+  "author": "Taverna da Impressão",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Lucasdoreac/taverna-da-impressao-site/issues"
+  },
+  "homepage": "https://tavernadaimpressao.com.br"
+}

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="60" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <style>
+            .medieval-text { font-family: 'MedievalSharp', cursive; fill: #C2B280; }
+            .tech-text { font-family: 'Roboto', sans-serif; fill: #4A0404; }
+            .taverna { fill: #7D5B3A; }
+            .printer { fill: #2F4F4F; }
+        </style>
+    </defs>
+    
+    <!-- Taverna (forma de casa medieval) -->
+    <g class="taverna">
+        <path d="M20 40 L35 25 L50 40 L48 40 L48 55 L22 55 L22 40 Z"/>
+        <!-- Detalhes da taverna -->
+        <rect x="25" y="45" width="5" height="10"/>
+        <rect x="35" y="45" width="5" height="10"/>
+    </g>
+    
+    <!-- Impressora 3D estilizada -->
+    <g class="printer" transform="translate(60, 30)">
+        <rect x="0" y="0" width="20" height="25"/>
+        <path d="M2 5 L18 5 L10 15 Z"/>
+        <!-- Extrusora -->
+        <rect x="8" y="2" width="4" height="8"/>
+    </g>
+    
+    <!-- Texto -->
+    <text x="90" y="35" class="medieval-text" font-size="24">Taverna da</text>
+    <text x="90" y="55" class="tech-text" font-size="20">Impressão</text>
+    
+    <!-- Ícone de dado D20 -->
+    <path d="M180 30 L190 40 L170 40 Z" fill="#C2B280"/>
+</svg>

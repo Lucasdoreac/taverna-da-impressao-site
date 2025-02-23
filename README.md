@@ -1,16 +1,19 @@
 # 🏰 Taverna da Impressão
 
-Site oficial da Taverna da Impressão, sua fonte de miniaturas e acessórios 3D para RPG e Board Games.
+Site oficial da Taverna da Impressão, hospedado no GitHub Pages.
+
+[![Deploy to GitHub Pages](https://github.com/Lucasdoreac/taverna-da-impressao-site/actions/workflows/deploy.yml/badge.svg)](https://github.com/Lucasdoreac/taverna-da-impressao-site/actions/workflows/deploy.yml)
+
+## 🌐 Site Ao Vivo
+
+Visite [tavernadaimpressao.com.br](https://tavernadaimpressao.com.br)
 
 ## 📋 Índice
 
 - [Estrutura do Projeto](#-estrutura-do-projeto)
-- [Pré-requisitos](#-pré-requisitos)
-- [Instalação](#-instalação)
-- [Desenvolvimento](#-desenvolvimento)
-- [Produção](#-produção)
+- [Desenvolvimento Local](#-desenvolvimento-local)
+- [Deploy](#-deploy)
 - [Tecnologias](#-tecnologias)
-- [SEO & Performance](#-seo--performance)
 
 ## 📁 Estrutura do Projeto
 
@@ -28,18 +31,10 @@ Site oficial da Taverna da Impressão, sua fonte de miniaturas e acessórios 3D 
 ├── index.html           # Página principal
 ├── manifest.json        # Configuração PWA
 ├── service-worker.js    # Service Worker para PWA
-├── robots.txt          # Configuração para crawlers
-├── sitemap.xml         # Mapa do site
-└── .htaccess           # Configurações do servidor
+└── CNAME               # Configuração de domínio personalizado
 ```
 
-## 🔧 Pré-requisitos
-
-- Servidor web (Apache/Nginx)
-- Node.js & NPM (para desenvolvimento)
-- PM2 (para produção)
-
-## 🚀 Instalação
+## 💻 Desenvolvimento Local
 
 1. Clone o repositório:
 ```bash
@@ -47,78 +42,78 @@ git clone https://github.com/Lucasdoreac/taverna-da-impressao-site.git
 cd taverna-da-impressao-site
 ```
 
-2. Instale as dependências:
+2. Instale um servidor local (por exemplo, usando Python):
 ```bash
-npm install
+# Python 3
+python -m http.server 8000
+
+# Python 2
+python -m SimpleHTTPServer 8000
 ```
 
-## 💻 Desenvolvimento
+3. Acesse `http://localhost:8000` no seu navegador
 
-Para rodar o projeto localmente:
+## 🚀 Deploy
 
+O site é automaticamente implantado no GitHub Pages quando há um push para o branch `main`. O workflow de deploy está configurado em `.github/workflows/deploy.yml`.
+
+### Deploy Manual
+
+1. Configure o GitHub Pages nas configurações do repositório:
+   - Vá para Settings > Pages
+   - Selecione branch `gh-pages` como source
+   - Salve as configurações
+
+2. Push para o branch main:
 ```bash
-npm run dev
+git add .
+git commit -m "Atualização do site"
+git push origin main
 ```
 
-O site estará disponível em `http://localhost:3000`
+### Domínio Personalizado
 
-## 🌐 Produção
-
-1. Prepare os arquivos:
-```bash
-npm run build
-```
-
-2. Deploy com PM2:
-```bash
-pm2 start ecosystem.config.js --env production
-```
+1. O domínio `tavernadaimpressao.com.br` está configurado no arquivo `CNAME`
+2. Configure seu DNS:
+   - Tipo: CNAME
+   - Nome: @
+   - Valor: lucasdoreac.github.io
 
 ## 🛠 Tecnologias
 
 - HTML5
-- CSS3 
+- CSS3
 - JavaScript (Vanilla)
 - SVG para imagens
 - PWA (Progressive Web App)
 
-## 📈 SEO & Performance
-
-O site foi otimizado para SEO com:
-
-- Meta tags apropriadas
-- Open Graph tags
-- Schema.org markup
-- Sitemap XML
-- Robots.txt configurado
-- Imagens otimizadas (SVG)
-- Cache configurado
-- GZIP habilitado
-
 ## 📱 PWA
 
 O site funciona como um Progressive Web App, permitindo:
-
 - Instalação no dispositivo
 - Funcionamento offline
 - Cache inteligente
-- Notificações push
-- Ícones adaptáveis
 
-## 🔐 Segurança
+## 🔒 Segurança
 
-- HTTPS forçado
-- Headers de segurança configurados
-- Proteção contra XSS
+- HTTPS forçado via GitHub Pages
+- Headers de segurança
 - CSP implementado
-- Arquivos sensíveis protegidos
 
 ## 📖 Documentação
 
 Para mais detalhes sobre:
 - [PWA](docs/pwa.md)
 - [SEO](docs/seo.md)
-- [Segurança](docs/security.md)
+- [Estrutura](docs/estrutura.md)
+
+## 🤝 Contribuindo
+
+1. Fork o projeto
+2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
+3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
+4. Push para a branch (`git push origin feature/AmazingFeature`)
+5. Abra um Pull Request
 
 ## 📄 Licença
 
@@ -127,4 +122,3 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 ## 📞 Contato
 
 - Email: contato@tavernadaimpressao.com.br
-- WhatsApp: (61) 98765-4321

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+    <!-- Base clara -->
+    <rect width="400" height="300" fill="#F5F5F5"/>
+    
+    <!-- Grid de linhas de impressão 3D -->
+    <g stroke="#E0E0E0" stroke-width="0.5">
+        <path d="M0 280 L400 280"/>
+        <path d="M0 260 L400 260"/>
+        <path d="M0 240 L400 240"/>
+    </g>
+    
+    <!-- Miniatura Central: Guerreiro -->
+    <g transform="translate(200,150)">
+        <!-- Base -->
+        <circle cx="0" cy="100" r="30" fill="#7D5B3A"/>
+        
+        <!-- Corpo -->
+        <path d="M-15 40 L15 40 L20 100 L-20 100 Z" fill="#2F4F4F"/>
+        
+        <!-- Armadura -->
+        <path d="M-20 50 L20 50 L15 80 L-15 80 Z" fill="#4A0404"/>
+        
+        <!-- Cabeça com Elmo -->
+        <circle cx="0" cy="20" r="15" fill="#C2B280"/>
+        <path d="M-15 20 L15 20 L0 0 Z" fill="#4A0404"/>
+        
+        <!-- Espada -->
+        <path d="M20 60 L35 40 L37 42 L22 62 Z" fill="#C2B280"/>
+        
+        <!-- Escudo -->
+        <path d="M-20 60 L-30 40 L-30 70 L-20 80 Z" fill="#7D5B3A"/>
+    </g>
+    
+    <!-- Miniatura Esquerda: Mago -->
+    <g transform="translate(100,150)">
+        <!-- Base -->
+        <circle cx="0" cy="100" r="25" fill="#7D5B3A"/>
+        
+        <!-- Manto -->
+        <path d="M-20 40 L20 40 L10 100 L-10 100 Z" fill="#4A0404"/>
+        
+        <!-- Cabeça com Chapéu -->
+        <circle cx="0" cy="20" r="12" fill="#C2B280"/>
+        <path d="M-15 20 L15 20 L0 -10 Z" fill="#4A0404"/>
+        
+        <!-- Cajado -->
+        <path d="M-5 40 L-15 0 L-13 -5 L-10 -3 Z" fill="#7D5B3A"/>
+    </g>
+    
+    <!-- Miniatura Direita: Dragão -->
+    <g transform="translate(300,150)">
+        <!-- Base -->
+        <circle cx="0" cy="100" r="35" fill="#7D5B3A"/>
+        
+        <!-- Corpo -->
+        <path d="M-30 60 C-20 40 20 40 30 60 L20 100 L-20 100 Z" fill="#2F4F4F"/>
+        
+        <!-- Cabeça -->
+        <path d="M20 50 L40 40 L35 60 Z" fill="#4A0404"/>
+        
+        <!-- Asas -->
+        <path d="M-20 60 C-10 20 10 20 20 60" fill="none" stroke="#7D5B3A" stroke-width="3"/>
+        <path d="M-15 55 C-5 25 5 25 15 55" fill="none" stroke="#7D5B3A" stroke-width="2"/>
+    </g>
+</svg>

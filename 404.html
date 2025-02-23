@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página não encontrada - Taverna da Impressão</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+        .error-container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+        }
+        .error-container h1 {
+            font-size: 4rem;
+            color: var(--cor-destaque);
+            margin-bottom: 1rem;
+        }
+        .error-container p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .btn-home {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background-color: var(--cor-primaria);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        .btn-home:hover {
+            background-color: var(--cor-destaque);
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <h1>404</h1>
+        <p>Ops! Parece que você se perdeu na taverna...</p>
+        <a href="./" class="btn-home">Voltar para o início</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taverna da Impressão - Miniaturas e Acessórios 3D para RPG e Board Games</title>
+    
+    <!-- Meta tags SEO -->
+    <meta name="description" content="Miniaturas e acessórios 3D personalizados para RPG e Board Games. Impressão 3D de alta qualidade para suas aventuras.">
+    <meta name="keywords" content="impressão 3D, RPG, board games, miniaturas, acessórios, jogos de tabuleiro">
+    <meta name="author" content="Taverna da Impressão">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/icons/favicon-16x16.png">
+    
+    <!-- PWA -->
+    <link rel="manifest" href="./manifest.json">
+    <meta name="theme-color" content="#7D5B3A">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Taverna da Impressão">
+    <link rel="apple-touch-icon" href="./assets/icons/icon-192x192.png">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Taverna da Impressão">
+    <meta property="og:description" content="Miniaturas e acessórios 3D personalizados para RPG e Board Games">
+    <meta property="og:image" content="./assets/images/social-share.jpg">
+    <meta property="og:url" content="https://tavernadaimpressao.com.br">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Taverna da Impressão">
+    <meta name="twitter:description" content="Miniaturas e acessórios 3D personalizados para RPG e Board Games">
+    <meta name="twitter:image" content="./assets/images/social-share.jpg">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Preconnect e Preload -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="./css/style.css">
+    <link rel="preload" as="image" href="./assets/images/products/miniaturas.svg">
+    <link rel="preload" as="image" href="./assets/images/products/terrenos.svg">
+    <link rel="preload" as="image" href="./assets/images/products/acessorios.svg">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <a href="./">
+                    <img src="./assets/images/logo.svg" alt="Taverna da Impressão" width="200" height="60">
+                </a>
+            </div>
+            <button class="menu-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#produtos">Produtos</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#como-funciona">Como Funciona</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Conteúdo existente continua o mesmo -->
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="./assets/images/logo.svg" alt="Taverna da Impressão" width="150" height="45">
+                    <p>Transformando jogos em experiências únicas</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="#produtos">Produtos</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#como-funciona">Como Funciona</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                        <li><a href="./politica-privacidade.html">Política de Privacidade</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contato">
+                    <h4>Entre em Contato</h4>
+                    <p>contato@tavernadaimpressao.com.br</p>
+                    <p>(61) 98765-4321</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Taverna da Impressão - Todos os direitos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="./js/main.js"></script>
+    <script>
+        // Registro do Service Worker
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('./service-worker.js')
+                    .then(function(registration) {
+                        console.log('ServiceWorker registrado com sucesso:', registration.scope);
+                    })
+                    .catch(function(error) {
+                        console.log('Falha ao registrar ServiceWorker:', error);
+                    });
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,109 +1,235 @@
-/* Admin Dashboard */
-.admin-stats {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    background: white;
-    padding: var(--spacing-md);
-    border-radius: var(--radius-md);
-    box-shadow: var(--shadow-lg);
-    max-width: 400px;
-    max-height: 80vh;
-    overflow-y: auto;
-    z-index: 2000;
+/* =========================================================================
+   Taverna da Impressão — estilos do site
+   Depende de variables.css e base.css (carregados antes deste arquivo).
+   ========================================================================= */
+
+.skip-link{
+    position:absolute;left:-9999px;top:0;z-index:3000;
+    background:var(--cor-destaque);color:var(--cor-texto-claro);
+    padding:var(--spacing-sm) var(--spacing-lg);font-weight:bold;
+}
+.skip-link:focus{left:0;color:var(--cor-texto-claro)}
+
+:focus-visible{outline:3px solid var(--cor-destaque);outline-offset:2px}
+
+/* ---------------- cabeçalho ---------------- */
+.header{
+    position:sticky;top:0;z-index:1000;
+    background:var(--cor-fundo);
+    border-bottom:1px solid var(--cor-borda);
+    transition:box-shadow .3s ease, background-color .3s ease;
+}
+.header.scrolled{box-shadow:var(--shadow-md);background:#fff}
+.header-inner{
+    display:flex;align-items:center;justify-content:space-between;gap:var(--spacing-md);
+    padding-top:var(--spacing-sm);padding-bottom:var(--spacing-sm);
+}
+.logo{display:flex;align-items:center;line-height:0}
+.logo img{width:180px;height:auto}
+
+.header nav ul{display:flex;align-items:center;gap:var(--spacing-lg)}
+.header nav a{
+    color:var(--cor-tech);font-weight:bold;
+    padding:var(--spacing-xs) 0;border-bottom:2px solid transparent;
+}
+.header nav a:hover{color:var(--cor-destaque);border-bottom-color:var(--cor-destaque)}
+.header nav a.btn{border-bottom:0;color:var(--cor-texto-claro)}
+.header nav a.btn:hover{border-bottom:0;color:var(--cor-texto-claro)}
+
+.nav-toggle{
+    display:none;flex-direction:column;gap:5px;
+    background:none;border:0;cursor:pointer;padding:var(--spacing-sm);
+}
+.nav-toggle span{display:block;width:26px;height:3px;background:var(--cor-primaria);border-radius:2px}
+
+/* ---------------- hero ---------------- */
+.hero{
+    background:var(--cor-primaria) url("../assets/images/hero-bg.svg") center/cover no-repeat;
+    color:var(--cor-texto-claro);
+    padding:var(--spacing-xl) 0;
+    text-align:center;
+}
+.hero h1{
+    color:var(--cor-texto-claro);
+    font-size:clamp(1.9rem,5vw,3rem);
+    line-height:1.2;
+    max-width:20ch;margin-left:auto;margin-right:auto;
+    text-shadow:0 2px 8px rgba(0,0,0,.35);
+}
+.hero-sub{
+    max-width:56ch;margin:0 auto var(--spacing-lg);
+    font-size:1.1rem;
+    text-shadow:0 1px 6px rgba(0,0,0,.35);
+}
+.hero-acoes{display:flex;gap:var(--spacing-md);justify-content:center;flex-wrap:wrap}
+.hero .btn-secondary{border-color:var(--cor-secundaria);color:var(--cor-secundaria)}
+.hero .btn-secondary:hover{background:var(--cor-secundaria);color:var(--cor-fundo-escuro)}
+
+/* ---------------- seções ---------------- */
+.secao{padding:var(--spacing-xl) 0}
+.secao-alt{background:#fff}
+.secao h2{font-size:clamp(1.6rem,3.6vw,2.2rem)}
+.secao-sub{
+    max-width:60ch;margin:0 auto var(--spacing-lg);
+    color:var(--cor-tech);
+}
+.container-estreito{max-width:760px}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:var(--spacing-lg);
+}
+.grid-4{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+
+/* ---------------- cartões ---------------- */
+.produto-card,
+.processo-card,
+.diferencial-card{
+    background:var(--cor-fundo);
+    border:1px solid var(--cor-borda);
+    border-top:4px solid var(--cor-primaria);
+    border-radius:var(--radius-md);
+    padding:var(--spacing-lg);
+    box-shadow:var(--shadow-sm);
+}
+.secao-alt .produto-card,
+.secao-alt .processo-card,
+.secao-alt .diferencial-card{background:var(--cor-fundo)}
+
+.produto-card h3,
+.processo-card h3,
+.diferencial-card h3{font-size:1.25rem;margin-bottom:var(--spacing-sm)}
+.produto-card p:last-child,
+.processo-card p:last-child,
+.diferencial-card p:last-child{margin-bottom:0}
+
+.diferencial-card{border-top-color:var(--cor-destaque)}
+
+.processo-card{position:relative;padding-top:calc(var(--spacing-lg) + var(--spacing-md))}
+.passo{
+    position:absolute;top:calc(var(--spacing-lg) * -0.5 - 6px);left:var(--spacing-lg);
+    width:40px;height:40px;border-radius:50%;
+    background:var(--cor-destaque);color:var(--cor-texto-claro);
+    display:flex;align-items:center;justify-content:center;
+    font-family:var(--font-titulo);font-size:1.3rem;
+    box-shadow:var(--shadow-sm);
 }
 
-.admin-stats h3 {
-    color: var(--cor-primaria);
-    margin-bottom: var(--spacing-md);
+/* ---------------- canais de contato ---------------- */
+.canais{display:grid;gap:var(--spacing-md);margin-bottom:var(--spacing-lg)}
+.canal{
+    display:block;
+    background:var(--cor-fundo);
+    border:1px solid var(--cor-borda);
+    border-left:4px solid var(--cor-destaque);
+    border-radius:var(--radius-md);
+    padding:var(--spacing-md) var(--spacing-lg);
+    color:var(--cor-texto);
+}
+.canal:hover{border-color:var(--cor-destaque);box-shadow:var(--shadow-md);color:var(--cor-texto)}
+.canal strong{display:block;font-family:var(--font-titulo);font-size:1.2rem;color:var(--cor-primaria)}
+.canal span{font-size:.95rem;color:var(--cor-tech)}
+
+/* Canal ainda não configurado: fica evidente em vez de virar link morto. */
+.canal[href="#"]{opacity:.55;cursor:not-allowed}
+.canal[href="#"]::after{
+    content:" — canal em configuração";
+    font-size:.85rem;color:var(--cor-destaque);font-weight:bold;
 }
 
-.admin-stats button {
-    background: var(--cor-destaque);
-    color: var(--cor-texto-claro);
-    border: none;
-    padding: var(--spacing-sm) var(--spacing-md);
-    border-radius: var(--radius-md);
-    cursor: pointer;
-    margin: var(--spacing-md) 0;
-    width: 100%;
+.nota{font-size:.95rem;color:var(--cor-tech)}
+
+/* ---------------- rodapé ---------------- */
+.footer{
+    background:var(--cor-fundo-escuro);
+    color:var(--cor-secundaria);
+    padding:var(--spacing-xl) 0 var(--spacing-lg);
+    text-align:center;
+}
+.footer-logo{margin-bottom:var(--spacing-md)}
+.footer p{margin-bottom:var(--spacing-sm)}
+.footer-nota{font-size:.9rem;opacity:.75;margin-bottom:0}
+
+/* ---------------- telas pequenas ---------------- */
+@media (max-width:768px){
+    .nav-toggle{display:flex}
+    .header nav{
+        display:none;
+        position:absolute;left:0;right:0;top:100%;
+        background:#fff;border-bottom:1px solid var(--cor-borda);
+        box-shadow:var(--shadow-md);
+    }
+    .header nav.aberto{display:block}
+    .header nav ul{flex-direction:column;align-items:stretch;gap:0;padding:var(--spacing-sm) var(--spacing-md)}
+    .header nav li{border-bottom:1px solid var(--cor-borda)}
+    .header nav li:last-child{border-bottom:0;padding:var(--spacing-md) 0}
+    .header nav a{display:block;padding:var(--spacing-md) 0}
+    .header nav a.btn{text-align:center}
+    .hero{padding:var(--spacing-lg) 0}
 }
 
-.admin-stats button:hover {
-    background: var(--cor-primaria);
+@media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
 }
 
-.admin-stats ul {
-    list-style: none;
-    padding: 0;
+/* ---------------- imagens de produto ---------------- */
+.produto-card{padding:0;overflow:hidden;display:flex;flex-direction:column}
+.produto-card .produto-img{
+    width:100%;height:auto;display:block;
+    aspect-ratio:4/3;object-fit:cover;
+    background:var(--cor-fundo);
+    border-bottom:1px solid var(--cor-borda);
 }
+.produto-card h3{padding:var(--spacing-lg) var(--spacing-lg) 0}
+.produto-card p{padding:0 var(--spacing-lg) var(--spacing-lg)}
+/* o quarto card não tem ilustração própria; mantém o respiro dos demais */
+.produto-card:not(:has(.produto-img)){padding:var(--spacing-lg)}
+.produto-card:not(:has(.produto-img)) h3,
+.produto-card:not(:has(.produto-img)) p{padding:0}
 
-.admin-stats li {
-    padding: var(--spacing-md);
-    border-bottom: 1px solid var(--cor-borda);
-    margin-bottom: var(--spacing-sm);
+/* ---------------- redes sociais no rodapé ---------------- */
+.redes{display:flex;gap:var(--spacing-md);justify-content:center;margin-bottom:var(--spacing-md)}
+.redes a{
+    display:flex;align-items:center;justify-content:center;
+    width:44px;height:44px;border-radius:50%;
+    background:rgba(255,255,255,.08);
 }
+.redes a:hover{background:rgba(255,255,255,.18)}
+.redes img{filter:brightness(0) saturate(100%) invert(84%) sepia(19%) saturate(469%) hue-rotate(9deg) brightness(92%) contrast(87%)}
+.redes a[href="#"]{opacity:.4;cursor:not-allowed}
 
-.admin-stats li:last-child {
-    border-bottom: none;
-}
-
-.admin-stats small {
-    display: block;
-    color: var(--cor-tech);
-    margin-top: var(--spacing-xs);
-}
-
-/* Loading State */
-.loading {
-    pointer-events: none;
-    opacity: 0.7;
-}
-
-.loading:after {
-    content: "";
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    border: 2px solid var(--cor-texto-claro);
-    border-radius: 50%;
-    border-top-color: transparent;
-    animation: spin 1s linear infinite;
-    margin-left: var(--spacing-sm);
-    vertical-align: middle;
-}
-
-@keyframes spin {
-    to { transform: rotate(360deg); }
-}
-
-/* Print Styles */
-@media print {
+/* ---------------- impressão ---------------- */
+@media print{
     .header,
     .footer,
     .hero,
-    .contato-form,
-    .btn {
-        display: none;
+    .skip-link,
+    .btn{
+        display:none;
     }
 
-    body {
-        color: black;
-        background: white;
+    body{
+        color:black;
+        background:white;
     }
 
-    .container {
-        width: 100%;
-        max-width: none;
-        padding: 0;
-        margin: 0;
+    .container{
+        width:100%;
+        max-width:none;
+        padding:0;
+        margin:0;
     }
 
     .produto-card,
     .processo-card,
-    .diferencial-card {
-        break-inside: avoid;
-        page-break-inside: avoid;
-        border: 1px solid #ddd;
+    .diferencial-card{
+        break-inside:avoid;
+        page-break-inside:avoid;
+        border:1px solid #ddd;
     }
+
+    .canal[href]::after{content:" (" attr(href) ")";font-size:.85em}
 }
+

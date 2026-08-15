@@ -1,32 +1,238 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Taverna da Impressão</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #F5F5F5;
-        }
-        .container {
-            text-align: center;
-            padding: 20px;
-        }
-        h1 {
-            color: #7D5B3A;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Taverna da Impressão — Miniaturas e acessórios 3D para RPG e board games</title>
+<meta name="description" content="Miniaturas, cenários e acessórios impressos em 3D para RPG de mesa e board games. Peças sob encomenda, com acabamento e pintura opcionais.">
+<meta name="theme-color" content="#7D5B3A">
+<meta property="og:title" content="Taverna da Impressão">
+<meta property="og:description" content="Miniaturas, cenários e acessórios impressos em 3D para RPG de mesa e board games.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="assets/images/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<a href="#conteudo" class="skip-link">Pular para o conteúdo</a>
+
+<header class="header">
+  <div class="container header-inner">
+    <a href="#inicio" class="logo" aria-label="Taverna da Impressão — início">
+      <img src="assets/images/logo.svg" alt="" width="200" height="60">
+    </a>
+    <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-principal">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="nav-principal" aria-label="Navegação principal">
+      <ul>
+        <li><a href="#produtos">O que fazemos</a></li>
+        <li><a href="#processo">Como funciona</a></li>
+        <li><a href="#diferenciais">Por que a Taverna</a></li>
+        <li><a href="#contato" class="btn btn-primary">Pedir orçamento</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="conteudo">
+
+  <section class="hero" id="inicio">
     <div class="container">
-        <h1>Taverna da Impressão</h1>
-        <p>Em construção...</p>
+      <h1>Sua mesa merece peças que ninguém mais tem</h1>
+      <p class="hero-sub">
+        Miniaturas, cenários e acessórios impressos em 3D para RPG de mesa e board games —
+        feitos sob encomenda, no tamanho e no acabamento que a sua campanha pede.
+      </p>
+      <div class="hero-acoes">
+        <a href="#contato" class="btn btn-primary">Pedir um orçamento</a>
+        <a href="#produtos" class="btn btn-secondary">Ver o que fazemos</a>
+      </div>
     </div>
+  </section>
+
+  <section class="secao" id="produtos">
+    <div class="container">
+      <h2 class="text-center">O que fazemos</h2>
+      <p class="secao-sub text-center">
+        Tudo impresso sob encomenda. Se você não achar aqui o que precisa, pergunte — provavelmente dá.
+      </p>
+
+      <div class="grid">
+        <article class="produto-card">
+          <img class="produto-img" src="assets/images/products/miniaturas.svg" alt="Ilustração de miniaturas impressas em 3D" width="400" height="300" loading="lazy">
+          <h3>Miniaturas de personagem</h3>
+          <p>
+            O personagem que existe só na sua ficha, em resina ou filamento. Serve tanto para o
+            protagonista do grupo quanto para aquele NPC que o mestre não esperava que virasse
+            importante.
+          </p>
+        </article>
+
+        <article class="produto-card">
+          <img class="produto-img" src="assets/images/products/terrenos.svg" alt="Ilustração de peças de cenário e terreno" width="400" height="300" loading="lazy">
+          <h3>Cenário e terreno</h3>
+          <p>
+            Ruínas, muros, portas, mobília, elementos modulares de masmorra. Peças que transformam
+            um mapa desenhado a lápis em algo que ocupa espaço na mesa.
+          </p>
+        </article>
+
+        <article class="produto-card">
+          <img class="produto-img" src="assets/images/products/acessorios.svg" alt="Ilustração de acessórios de mesa impressos em 3D" width="400" height="300" loading="lazy">
+          <h3>Acessórios de mesa</h3>
+          <p>
+            Torres de dado, bandejas de rolagem, porta-dados, suportes de ficha e marcadores de
+            condição. As coisas que a mesa não sabia que precisava até ver funcionando.
+          </p>
+        </article>
+
+        <article class="produto-card">
+          <h3>Organizadores para board games</h3>
+          <p>
+            Insertos e bandejas sob medida para caixas de jogo — para acabar com o saquinho plástico
+            e com os dez minutos de setup antes de cada partida.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="secao secao-alt" id="processo">
+    <div class="container">
+      <h2 class="text-center">Como funciona</h2>
+      <p class="secao-sub text-center">Do "queria uma peça assim" até ela na sua mão.</p>
+
+      <div class="grid grid-4">
+        <article class="processo-card">
+          <span class="passo" aria-hidden="true">1</span>
+          <h3>Você conta o que quer</h3>
+          <p>Descrição, referência, print do personagem, foto de algo parecido. Serve qualquer coisa que dê para entender a ideia.</p>
+        </article>
+
+        <article class="processo-card">
+          <span class="passo" aria-hidden="true">2</span>
+          <h3>A gente orça</h3>
+          <p>Você recebe prazo e preço antes de qualquer coisa começar — junto com o que dá e o que não dá para fazer.</p>
+        </article>
+
+        <article class="processo-card">
+          <span class="passo" aria-hidden="true">3</span>
+          <h3>Impressão</h3>
+          <p>A peça é impressa na escala combinada. Se algo sair diferente do esperado, você fica sabendo antes de receber.</p>
+        </article>
+
+        <article class="processo-card">
+          <span class="passo" aria-hidden="true">4</span>
+          <h3>Acabamento e entrega</h3>
+          <p>Limpeza e remoção de suportes inclusas. Pintura é opcional — pode vir crua, para você mesmo pintar.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="secao" id="diferenciais">
+    <div class="container">
+      <h2 class="text-center">Por que a Taverna</h2>
+
+      <div class="grid">
+        <article class="diferencial-card">
+          <h3>Sob encomenda de verdade</h3>
+          <p>
+            Não é catálogo fechado. Se a peça existe como modelo ou dá para adaptar, ela pode ser
+            feita — inclusive em escala diferente da original.
+          </p>
+        </article>
+
+        <article class="diferencial-card">
+          <h3>Preço antes, sempre</h3>
+          <p>
+            Você aprova valor e prazo antes de começar. Nada de orçamento que muda no meio nem de
+            surpresa na entrega.
+          </p>
+        </article>
+
+        <article class="diferencial-card">
+          <h3>Quem imprime joga</h3>
+          <p>
+            Dá para conversar em português de mesa: escala, base, se vai encaixar no grid, se aguenta
+            manuseio de sessão. Sem precisar traduzir para linguagem de impressão.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="secao secao-alt" id="contato">
+    <div class="container container-estreito">
+      <h2 class="text-center">Pedir um orçamento</h2>
+      <p class="secao-sub text-center">
+        Mande a ideia com o máximo de detalhe que conseguir — referência, escala, quantidade e
+        para quando você precisa.
+      </p>
+
+      <!--
+        ============================ CONFIGURE AQUI ============================
+        Troque os href abaixo pelos canais reais antes de divulgar o site.
+          WhatsApp : https://wa.me/55DDDNUMERO?text=Oi%2C%20vim%20pelo%20site
+          E-mail   : mailto:seu@email.com
+          Instagram: https://instagram.com/seuperfil
+        Se algum canal não existir, apague o bloco <li> inteiro em vez de
+        deixar link morto.
+        ========================================================================
+      -->
+      <ul class="canais">
+        <li>
+          <a class="canal" href="#" data-configurar="whatsapp">
+            <strong>WhatsApp</strong>
+            <span>O jeito mais rápido — mande a referência direto na conversa</span>
+          </a>
+        </li>
+        <li>
+          <a class="canal" href="#" data-configurar="email">
+            <strong>E-mail</strong>
+            <span>Para pedidos maiores, com anexo e mais detalhe</span>
+          </a>
+        </li>
+        <li>
+          <a class="canal" href="#" data-configurar="instagram">
+            <strong>Instagram</strong>
+            <span>Para ver peças prontas antes de decidir</span>
+          </a>
+        </li>
+      </ul>
+
+      <p class="nota text-center">
+        Respondemos em até um dia útil. Orçamento não tem compromisso.
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <img src="assets/images/logo.svg" alt="Taverna da Impressão" width="160" height="48" class="footer-logo">
+    <p>Miniaturas e acessórios 3D para RPG e board games.</p>
+    <ul class="redes">
+      <li><a href="#" data-configurar="instagram" aria-label="Instagram">
+        <img src="assets/images/social/instagram.svg" alt="" width="24" height="24"></a></li>
+      <li><a href="#" data-configurar="facebook" aria-label="Facebook">
+        <img src="assets/images/social/facebook.svg" alt="" width="24" height="24"></a></li>
+    </ul>
+    <p class="footer-nota">
+      &copy; <span id="ano">2026</span> Taverna da Impressão.
+    </p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
 </body>
 </html>
